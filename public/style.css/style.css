@@ -12,6 +12,7 @@ body {
 
 .container {
   max-width: 960px;
+  margin: 0 auto;
 }
 
 img {
@@ -29,10 +30,13 @@ a {
 header {
   height: 70px;
   width: 100%;
-  background-color: #0C87F2;
+  background: #0c87f2;
 }
 
-header .header {
+.header__content {
+  height: 70px;
+  width: 100%;
+  background: #0c87f2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +48,7 @@ header .header {
           align-items: center;
 }
 
-header .header .header__logo {
+.header__content .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,13 +57,18 @@ header .header .header__logo {
           align-items: center;
 }
 
-header .header .header__logo .logo {
+.header__content .header__logo img {
   width: 50px;
+  margin-right: 1rem;
 }
 
-header .header nav ul {
+.header__content .header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header__content .header__nav ul li {
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
