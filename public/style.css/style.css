@@ -87,13 +87,97 @@ header {
 footer {
   background-color: #303642;
   color: #fff;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
 }
 
 footer .section__header {
   grid-column: span 2;
+  margin-top: 1rem;
+}
+
+footer .footer__container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+footer .footer__container .contact p {
+  margin-bottom: 1rem;
+}
+
+footer .footer__container .contact form input,
+footer .footer__container .contact form textarea {
+  font-weight: 400;
+  font-family: 'Poppins', san-serif;
+  padding: .5rem;
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+footer .footer__container .contact form .contact__btn {
+  background-color: #0c87f2;
+  border: solid transparent 3px;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+footer .footer__container .contact form .contact__btn:hover {
+  background-color: #012340;
+  border-bottom: solid 3px #0c87f2;
+}
+
+footer .footer__container .footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer__container .nav__items {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+footer .footer__container .nav__items li {
+  border-bottom: 2px solid #fff;
+  padding: 5px 10px;
+  margin-bottom: 2rem;
+}
+
+footer .footer__container .nav__items li:hover {
+  background-color: #3b4251;
+}
+
+footer .copyright {
+  background-color: #485161;
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: .7rem;
+}
+
+@media (max-width: 850px) {
+  footer .footer__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  footer .section__header {
+    grid-column: span 1;
+  }
+  footer .copyright {
+    grid-column: span 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -32,18 +32,46 @@
 
     <!-- FOOTER -->
     <footer>
-        <h2 class="section__header">Contact Us</h2>
-        <div class="contact">
-            <p>For any estimates, questions or inqueries, please contact us at:
-            </p>
-            <p>
-                Phone: 512 369 2719 <br>
-                Email: daryl@brenkconstruction.com</p>
+        <div class="container">
+            <div class="footer__container">
+                <h2 class="section__header">Contact Us</h2>
+                <div class="contact">
+                    <p>For any estimates, questions or inqueries, please contact us at:
+                    </p>
+                    <p>
+                        Phone: 512 369 2719 <br>
+                        Email: daryl@brenkconstruction.com
+                    </p>
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify
+                        class="form__items">
+                        <div class="form__group">
+                            <input type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="form__group">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form__group">
+                            <textarea type="text" name="message" rows="8" placeholder="Message"></textarea>
+                        </div>
+                        <div class="" data-netlify-recaptcha="true"></div>
+                        <button type="submit" class="contact__btn btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer__nav">
+                    <ul class="nav__items">
+                        <li><a src="#home">Home</a></li>
+                        <li><a src="#about">About</a></li>
+                        <li><a src="#reviews">Reviews</a></li>
+                        <li><a src="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    Copyright &copy; 2020, All rights reserved
+                </div>
+            </div>
         </div>
-        <div class="foot__nav"></div>
-        <div class="copyright">
-            Copyright &copy; 2020, All rights reserved
-        </div>
+
+
     </footer>
 
     <script src="scripts/app.js" defer></script>

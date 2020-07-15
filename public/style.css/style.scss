@@ -88,11 +88,102 @@ header {
 footer {
     background-color: #303642;
     color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
 
     .section__header {
         grid-column: span 2;
+        margin-top: 1rem;
+    }
+
+    .footer__container {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+    
+        .contact {
+            & p {
+                margin-bottom: 1rem;
+            }
+
+            & form {
+                & input,
+                & textarea {
+                    font-weight: 400;
+                    font-family: 'Poppins', san-serif;
+                    padding: .5rem;
+                    display: block;
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+
+                .contact__btn {
+                    background-color: $color__primary;
+                    border: solid transparent 3px;
+                    padding: 5px 10px;
+                    font-size: 1.4rem;
+                    color: #fff;
+                    display: block;
+                    width: 100%;
+                    font-weight: bold;
+
+                    &:hover {
+                        background-color: $color__dark;
+                        border-bottom: solid 3px $color__primary;
+                    }
+                }
+            }
+        }
+
+        .footer__nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .nav__items {
+            font-size: 1.4rem;
+            font-weight: bold;
+
+            li {
+                border-bottom: 2px solid #fff;
+                padding: 5px 10px;
+                margin-bottom: 2rem;
+
+                &:hover {
+                    background-color: lighten($color: #303642, $amount: 5);
+                }
+            }
+        }
+    }
+
+
+
+
+
+    .copyright {
+        background-color: #485161;
+        grid-column: span 2;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: .7rem;
+    }
+}
+
+
+@media(max-width: 850px) {
+    footer {
+        .footer__container {
+            grid-template-columns: 1fr;
+        }
+
+        .section__header {
+            grid-column: span 1;
+        }
+
+        
+
+        .copyright {
+            grid-column: span 1;
+        }
     }
 }
