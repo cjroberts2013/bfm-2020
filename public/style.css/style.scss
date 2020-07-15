@@ -15,8 +15,14 @@ body {
 
 // UTILITIES //
 .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section__header {
+    font-size: 2rem;
+    text-align: center;
 }
 
 img {
@@ -36,12 +42,12 @@ header {
     height: 70px;
     width: 100%;
     background: $color__primary;
+    color: #fff;
 }
 
 .header__content {
     height: 70px;
-    width: 100%;
-    background: $color__primary;
+    //width: 100%;
 
 
     display: flex;
@@ -52,10 +58,11 @@ header {
     .header__logo {
     display: flex;
     align-items: center;
+    font-size: 1.6rem;
 
-        & img{
-            width: 50px;
-            margin-right: 1rem;
+        img{
+            width: 35px;
+            margin-right: .5rem;
         }
     }
 
@@ -63,7 +70,29 @@ header {
         display: flex;
 
         li {
-            padding: 1rem;
+            padding: 5px 10px;
+            border: transparent 3px solid;
+
+            &:hover {
+                background-color: lighten($color__primary, $amount: 5);
+                border-bottom: $color__dark solid 3px;
+            }
         }
+    }
+}
+
+
+
+
+// FOOTER
+footer {
+    background-color: #303642;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    .section__header {
+        grid-column: span 2;
     }
 }
