@@ -81,6 +81,28 @@ header {
     }
 }
 
+// MAIN BODY
+.main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "services reviews"
+               "services about";
+}
+
+.services {
+ background-color: green;
+ grid-area: services;
+}
+
+.reviews {
+    background-color: red;
+    grid-area: reviews;
+}
+
+.about {
+    background-color: blue;
+    grid-area: about;
+}
 
 
 
