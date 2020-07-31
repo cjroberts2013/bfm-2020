@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
@@ -31,6 +35,22 @@ li {
 
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  background-color: #0c87f2;
+  border: solid transparent 3px;
+  padding: 5px 8px;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.btn:hover {
+  background-color: #012340;
+  border-bottom: solid 3px #0c87f2;
 }
 
 header {
@@ -60,12 +80,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .header__content .header__logo img {
   width: 35px;
-  margin-right: .5rem;
+  margin-right: 1rem;
 }
 
 .header__content .header__nav ul {
@@ -82,6 +102,10 @@ header {
 .header__content .header__nav ul li:hover {
   background-color: #2393f4;
   border-bottom: #012340 solid 3px;
+}
+
+.header__content .header__nav ul li a {
+  font-size: 1.4rem;
 }
 
 .main {
@@ -101,10 +125,39 @@ header {
 }
 
 .reviews {
-  background-color: red;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: reviews;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+}
+
+.reviews .review__card {
+  background-color: #eee;
+  color: #303642;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.reviews .review__card--author {
+  color: #888;
+  margin-bottom: .5rem;
+}
+
+.reviews .review__card--text {
+  font-size: 1.4rem;
 }
 
 .about {
@@ -130,6 +183,10 @@ footer .footer__container {
   grid-gap: 2rem;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+}
+
+footer .footer__container .contact {
+  font-size: 1.4rem;
 }
 
 footer .footer__container .contact p {
@@ -198,7 +255,21 @@ footer .copyright {
   padding: .7rem;
 }
 
+:target:before {
+  content: "";
+  display: block;
+  height: 90px;
+  /* fixed header height*/
+  margin: -90px 0 0;
+  /* negative fixed header height */
+}
+
 @media (max-width: 850px) {
+  .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "services" "reviews"                     "about";
+  }
   footer .footer__container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

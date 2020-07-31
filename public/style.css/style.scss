@@ -8,12 +8,17 @@ $color__dark: #012340;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
 }
 
 // UTILITIES //
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -35,6 +40,23 @@ li{
 
 a {
     text-decoration: none;
+    color: #fff;
+}
+
+.btn {
+        background-color: $color__primary;
+        border: solid transparent 3px;
+        padding: 5px 8px;
+        font-size: 1.4rem;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        &:hover {
+            background-color: $color__dark;
+            border-bottom: solid 3px $color__primary;
+        }
+
 }
 // HEADER //
 
@@ -58,11 +80,11 @@ header {
     .header__logo {
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
 
         img{
             width: 35px;
-            margin-right: .5rem;
+            margin-right: 1rem;
         }
     }
 
@@ -76,6 +98,10 @@ header {
             &:hover {
                 background-color: lighten($color__primary, $amount: 5);
                 border-bottom: $color__dark solid 3px;
+            }
+
+            a {
+                font-size: 1.4rem;
             }
         }
     }
@@ -94,9 +120,31 @@ header {
  grid-area: services;
 }
 
+// REVIEWS
 .reviews {
-    background-color: red;
     grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+
+    .review__card {
+        background-color: #eee;
+        color: #303642;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+        max-width: 500px;
+        padding: 1rem;
+        margin: 1rem;
+        
+        &--author {
+            color: #888;
+            margin-bottom: .5rem;
+        }
+
+        &--text {
+            font-size: 1.4rem;
+        }
+    }
 }
 
 .about {
@@ -122,6 +170,7 @@ footer {
         grid-template-columns: 1fr 1fr;
     
         .contact {
+            font-size: 1.4rem;
             & p {
                 margin-bottom: 1rem;
             }
@@ -192,7 +241,21 @@ footer {
 }
 
 
+:target:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
+    }
+
 @media(max-width: 850px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "services"
+        "reviews"                    
+        "about";
+    }
+
     footer {
         .footer__container {
             grid-template-columns: 1fr;
