@@ -151,8 +151,12 @@ header {
   margin: 1rem;
 }
 
+.reviews .review__card--header {
+  text-align: center;
+}
+
 .reviews .review__card--author {
-  color: #888;
+  color: #555;
   margin-bottom: .5rem;
 }
 
@@ -253,15 +257,6 @@ footer .copyright {
   text-align: center;
   margin-bottom: 1rem;
   padding: .7rem;
-}
-
-:target:before {
-  content: "";
-  display: block;
-  height: 90px;
-  /* fixed header height*/
-  margin: -90px 0 0;
-  /* negative fixed header height */
 }
 
 @media (max-width: 850px) {

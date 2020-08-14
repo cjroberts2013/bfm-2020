@@ -135,9 +135,13 @@ header {
         max-width: 500px;
         padding: 1rem;
         margin: 1rem;
+
+        &--header {
+            text-align: center;
+        }
         
         &--author {
-            color: #888;
+            color: #555;
             margin-bottom: .5rem;
         }
 
@@ -241,12 +245,6 @@ footer {
 }
 
 
-:target:before {
-    content:"";
-    display:block;
-    height:90px; /* fixed header height*/
-    margin:-90px 0 0; /* negative fixed header height */
-    }
 
 @media(max-width: 850px) {
     .main {
